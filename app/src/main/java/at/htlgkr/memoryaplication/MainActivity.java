@@ -2,6 +2,7 @@ package at.htlgkr.memoryaplication;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,12 +13,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import org.w3c.dom.Text;
+import java.util.ArrayList;
+import java.util.List;
 
 import at.htlgkr.memoryaplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     TextView tvTitle;
+    ImageView[][]gameField = new ImageView[4][4];
+    Modell modell;
+    List<Integer>imageViewList = new ArrayList<>();
 
     private ActivityMainBinding binding;
 
@@ -36,17 +41,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         binding.tvTitle.setText("Test");
 
-        binding.imageView1.setImageResource(R.drawable.picture00);
-        binding.imageView1.setOnClickListener(view -> {
-            binding.imageView1.setImageResource(R.drawable.ic_launcher_background);
+        
+        addBlankFieldsToField();
+
+        //Neues Modell mit dem Gamefield anlegen
+        modell = new Modell(gameField);
+
+        binding.imageView1.setOnClickListener(view->{
+
         });
-
-
     }
 
 
     @Override
     public void onClick(View v) {
+
         Snackbar.make(v,"Gewonnen",Snackbar.LENGTH_SHORT).show();
+    }
+
+    public void addBlankFieldsToField(){
+        binding.imageView1.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView2.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView3.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView4.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView5.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView6.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView7.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView8.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView9.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView10.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView11.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView12.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView13.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView14.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView15.setImageResource(R.drawable.ic_launcher_background);
+        binding.imageView16.setImageResource(R.drawable.ic_launcher_background);
+
+
+    }
+
+    public void addPicturesToList(){
+        //Image Liste befüllen:
+        imageViewList.add(R.drawable.picture1);imageViewList.add(R.drawable.picture1);
+        imageViewList.add(R.drawable.picture2);imageViewList.add(R.drawable.picture2);
+        imageViewList.add(R.drawable.picture3);imageViewList.add(R.drawable.picture3);
+        imageViewList.add(R.drawable.picture4);imageViewList.add(R.drawable.picture4);
+        imageViewList.add(R.drawable.picture4);imageViewList.add(R.drawable.picture5);
+        imageViewList.add(R.drawable.picture5);imageViewList.add(R.drawable.picture6);
+        imageViewList.add(R.drawable.picture6);imageViewList.add(R.drawable.picture7);
+        imageViewList.add(R.drawable.picture7);imageViewList.add(R.drawable.picture8);
     }
 }

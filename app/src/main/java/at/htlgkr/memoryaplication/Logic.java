@@ -7,6 +7,10 @@ public class Logic {
 
     public double getRandomXY(){
         Random random = new Random();
-        double cords = 00;
+        return 1;
     }
+
+
+
+
 }
