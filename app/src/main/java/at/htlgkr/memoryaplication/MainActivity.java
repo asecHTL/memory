@@ -1,5 +1,7 @@
 package at.htlgkr.memoryaplication;
 
+import static at.htlgkr.memoryaplication.Logic.fillGameField;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,9 +22,10 @@ import at.htlgkr.memoryaplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     TextView tvTitle;
-    ImageView[][]gameField = new ImageView[4][4];
+    Integer[][]gameField;
     Modell modell;
     List<Integer>imageViewList = new ArrayList<>();
+    Logic logic;
 
     private ActivityMainBinding binding;
 
@@ -41,8 +44,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         binding.tvTitle.setText("Test");
 
-        
+        gameField = Logic.fillGameField(imageViewList,gameField);
+
+        //Blanke Felder anzeigen && Pictures in Liste einfügen
         addBlankFieldsToField();
+        addPicturesToList();
+
+        fillGameField(imageViewList,gameField);
 
         //Neues Modell mit dem Gamefield anlegen
         modell = new Modell(gameField);
@@ -90,5 +98,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageViewList.add(R.drawable.picture5);imageViewList.add(R.drawable.picture6);
         imageViewList.add(R.drawable.picture6);imageViewList.add(R.drawable.picture7);
         imageViewList.add(R.drawable.picture7);imageViewList.add(R.drawable.picture8);
+    }
+
+
+    public void showPictures(Integer[][]pictureList){
+
     }
 }
