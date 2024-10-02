@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     List<Integer>picturesRandom = new ArrayList<>();
     List<Integer>forGameFieldPictues = new ArrayList<>();
     List<Integer>picturesOncklick = new ArrayList<>();
+    List<Integer>pairList = new ArrayList<>();
     Logic logic = new Logic();
 
 
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView1.setImageResource(picturesRandom.get(0));
             picturesOncklick.add(picturesRandom.get(0));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView1);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView2.setImageResource(picturesRandom.get(1));
             picturesOncklick.add(picturesRandom.get(1));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView2);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView3.setImageResource(picturesRandom.get(2));
             picturesOncklick.add(picturesRandom.get(2));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView3);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView4.setImageResource(picturesRandom.get(3));
             picturesOncklick.add(picturesRandom.get(3));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView4);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView5.setImageResource(picturesRandom.get(4));
             picturesOncklick.add(picturesRandom.get(4));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView5);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView6.setImageResource(picturesRandom.get(5));
             picturesOncklick.add(picturesRandom.get(5));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView6);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView7.setImageResource(picturesRandom.get(6));
             picturesOncklick.add(picturesRandom.get(6));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView7);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -130,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView8.setImageResource(picturesRandom.get(7));
             picturesOncklick.add(picturesRandom.get(7));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView8);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -139,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView9.setImageResource(picturesRandom.get(8));
             picturesOncklick.add(picturesRandom.get(8));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView9);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView10.setImageResource(picturesRandom.get(9));
             picturesOncklick.add(picturesRandom.get(9));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView10);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -157,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView11.setImageResource(picturesRandom.get(10));
             picturesOncklick.add(picturesRandom.get(10));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView11);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -166,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView12.setImageResource(picturesRandom.get(11));
             picturesOncklick.add(picturesRandom.get(11));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView12);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -175,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView13.setImageResource(picturesRandom.get(12));
             picturesOncklick.add(picturesRandom.get(12));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView13);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -184,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView14.setImageResource(picturesRandom.get(13));
             picturesOncklick.add(picturesRandom.get(13));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView14);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -193,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.imageView15.setImageResource(picturesRandom.get(14));
             picturesOncklick.add(picturesRandom.get(14));
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView15);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -203,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             picturesOncklick.add(picturesRandom.get(15));
 
             try {
-                handle(picturesOncklick);
+                handle(picturesOncklick, binding.imageView16);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -240,25 +241,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public void handle(List<Integer>picturesClicked ) throws InterruptedException {
+    public void  handle(List<Integer>picturesClicked , ImageView imageView) throws InterruptedException {
         if (picturesClicked.size() == 2){
-            if (Objects.equals(picturesClicked.get(0), picturesClicked.get(1))){
+            if (picturesClicked.get(0).equals(picturesClicked.get(1))){
                 tvTitle.setText("Toll du hast ein Paar gefunden");
+                pairList.add(picturesClicked.get(0));
+                pairList.add(picturesClicked.get(1));
+                imageView.setClickable(false);
                 Thread.sleep(600);
-                addBlankFieldsToField();
                 pairCounterString = String.valueOf(counter);
                 pairCounter.setText(pairCounterString);
                 picturesClicked.clear();
-                tvTitle.setText("Lets try again");
+
 
             }else {
-                tvTitle.setText("Das war woll ein Griff ins kloo!");
-                addBlankFieldsToField();
-                tvTitle.setText("Lets try again");
+                picturesClicked.clear();
                 Thread.sleep(600);
+                tvTitle.setText("Das war woll ein Griff ins kloo!");
+                tvTitle.setText("Lets try again");
+                addBlankFieldsToField();
+
             }
         }
+
     }
+
+
 
 
 
