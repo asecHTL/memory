@@ -72,7 +72,6 @@ public class Logic {
         for (int i= 0; i < imageList.size(); i ++){
             int id = imageIdList.get(i);
             ImageView imageView = imageList.get(i);
-            Debug.d
             imageView.setImageResource(id);
         }
     }

@@ -22,7 +22,7 @@ import java.util.Objects;
 
 import at.htlgkr.memoryaplication.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
     TextView tvTitle;
     TextView pairCounter;
     int counter = 0;
@@ -204,7 +204,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.imageView16.setOnClickListener(view->{
             binding.imageView16.setImageResource(picturesRandom.get(15));
             picturesOncklick.add(picturesRandom.get(15));
-
             try {
                 handle(picturesOncklick);
             } catch (InterruptedException e) {
@@ -214,25 +213,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
     }
-
-
-    @Override
-    public void onClick(View v) {
-
-        Snackbar.make(v,"Gewonnen",Snackbar.LENGTH_SHORT).show();
-    }
-
-
-
     public void  handle(List<Integer>picturesClicked) throws InterruptedException {
         if (picturesClicked.size() == 2){
             if (picturesClicked.get(0).equals(picturesClicked.get(1))){
-
                 pariListInt.add(picturesClicked.get(0));
                 pariListInt.add(picturesClicked.get(1));
-
-
-
                 pairListImage.add(findViewById(picturesClicked.get(0)));
                 pairListImage.add(findViewById(picturesClicked.get(1)));
 
@@ -243,8 +228,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     pairCounter.setText(pairCounterString);
                     picturesClicked.clear();
                 }, 1000);
-
-
             }else {
                 picturesClicked.clear();
                 new Handler().postDelayed(() -> {
@@ -253,8 +236,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     logic.addBlankFieldsToField(binding);
                     logic.setPairImage(pairListImage,pariListInt);
                 },1000);
-
-
             }
         }
 
