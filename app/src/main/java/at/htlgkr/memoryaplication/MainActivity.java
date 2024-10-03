@@ -227,6 +227,7 @@ public class MainActivity extends AppCompatActivity{
                     pairCounterString = String.valueOf(counter);
                     pairCounter.setText(pairCounterString);
                     picturesClicked.clear();
+                    logic.checkWin(binding,counter);
                 }, 1000);
             }else {
                 picturesClicked.clear();

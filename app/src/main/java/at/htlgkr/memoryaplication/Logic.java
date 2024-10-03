@@ -76,5 +76,11 @@ public class Logic {
         }
     }
 
+    public void checkWin(ActivityMainBinding binding,int temp){
+        if (temp == 8){
+            binding.tvTitle.setText("Du hast alle Paare gefunden ! Toll gemacht");
+        }
+    }
+
 
 }
